@@ -2,7 +2,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MatCardModule, MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/autenticacao/login/login.component';
@@ -24,7 +24,9 @@ import { UsuarioServiceService } from './services/usuario-service/usuario-servic
     BrowserModule,
     BrowserAnimationsModule,
     MdButtonModule,
-    MdCheckboxModule
+    MdCheckboxModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [
     UsuarioServiceService

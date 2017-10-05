@@ -2,16 +2,22 @@
   //width: 250px;
   text-align: center;
 
-  p {
-    padding: 25px 20px;
+  #title {
+    background-color: #0AC986;
+    color: white;
+
+    p {
+      padding: 25px 20px;
+      -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+    }
+  }
+
+  form {
+    background-color: white;
   }
 }
 
-#title {
-  background-color: #0AC986;
-  color: white;
-}
 
-form {
-  background-color: white;
-}
+
+

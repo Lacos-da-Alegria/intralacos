@@ -27,13 +27,16 @@ const appRoutes: Routes = [
       }
     ]
   },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+
   {
     path: '',
-    component: AppComponent
+    component: AppComponent,
+    children: [
+      {
+        path: 'home',
+        component: HomeComponent
+      }
+    ]
   }
 ];
 

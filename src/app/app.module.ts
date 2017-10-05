@@ -1,8 +1,9 @@
+import { CustomMaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MatCardModule, MatInputModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/autenticacao/login/login.component';
@@ -23,10 +24,8 @@ import { UsuarioServiceService } from './services/usuario-service/usuario-servic
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
-    MatCardModule,
-    MatInputModule
+    CustomMaterialModule,
+    FlexLayoutModule
   ],
   providers: [
     UsuarioServiceService

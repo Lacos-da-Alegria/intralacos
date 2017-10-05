@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { UsuarioServiceService } from './services/usuario-service/usuario-service.service';
+import { UsuarioService } from './services/usuario-service/usuario-service.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'app';
 
   constructor(
-    private usuarioServico: UsuarioServiceService,
+    private usuarioServico: UsuarioService,
     private router: Router
   ) {
       if (!this.usuarioServico.getUsuarioLogadoAtual()) {

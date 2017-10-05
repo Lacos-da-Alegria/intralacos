@@ -3,10 +3,11 @@
     <p>ÁREA DO VOLUNTÁRIO</p>
   </div>
   <div class="login-form" fxFlex>
-    <form>
-      <div class="form-group" id="login-email" fxLayout="row" fxLayoutAlign="center">
+    <form (ngSubmit)="login()">
+      <div id="login-email" fxLayout="row" fxLayoutAlign="center">
         <md-form-field>
-          <input mdInput type="email" placeholder="Email" [formControl]="emailFormControl">
+          <input mdInput type="email" placeholder="Email"
+                 name="email" #email="ngModel" ([ngModel])="usuario.email" >
           <md-error *ngIf="emailFormControl.hasError('pattern')">
             Insira um email válido.
           </md-error>
@@ -15,9 +16,10 @@
           </md-error>
         </md-form-field>
       </div>
-      <div class="form-group" id="login-senha">
+      <div id="login-senha">
         <md-form-field>
-          <input mdInput type="password" placeholder="Senha" [formControl]="senhaFormControl">
+          <input mdInput type="password" placeholder="Senha"
+                 name="senha" #senha="ngModel" ([ngModel])="usuario.senha" [formControl]="senhaFormControl">
           <md-error *ngIf="senhaFormControl.hasError('required')">
             Campo <strong>obrigatório!</strong>
           </md-error>
@@ -27,7 +29,7 @@
         <a href="#">Esqueceu a senha?</a>
       </div>
       <div>
-        <button md-raised-button><md-icon>lock</md-icon>Iniciar Sessão</button>
+        <button md-raised-button type="submit"><md-icon>lock</md-icon>Iniciar Sessão</button>
       </div>
       <div id="login-text">
         <h2>Ainda não é Voluntário?</h2>

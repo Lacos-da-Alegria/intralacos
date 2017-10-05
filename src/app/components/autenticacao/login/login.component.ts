@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UsuarioLoginModel } from './../../../models/usuarioLogin.models';
+import { Component } from '@angular/core';
+import { Validators, FormControl, NgModel } from '@angular/forms';
+import { UsuarioService } from './../../../services/usuario-service/usuario-service.service';
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -10,12 +12,19 @@ const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA
 })
 export class LoginComponent {
 
-  email: String;
-  password: String;
+  usuario: UsuarioLoginModel;
 
   emailFormControl = new FormControl('', [Validators.required,
                                           Validators.pattern(EMAIL_REGEX)]);
   senhaFormControl = new FormControl('', [Validators.required]);
 
-  constructor() { }
+  constructor(
+    private usuarioService: UsuarioService
+  ) {
+    this.usuario = new UsuarioLoginModel('', '');
+  }
+
+  login() {
+    console.log(this.usuario.email);
+  }
 }

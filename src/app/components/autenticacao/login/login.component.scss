@@ -1,13 +1,17 @@
 #login-content {
-  //width: 250px;
+  max-width: 340px;
   text-align: center;
 
   #title {
     background-color: #0AC986;
     color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-radius: 5px 5px 0 0;
 
     p {
-      padding: 25px 20px;
+      padding: 30px 20px;
       -webkit-margin-before: 0em;
       -webkit-margin-after: 0em;
     }
@@ -15,6 +19,47 @@
 
   form {
     background-color: white;
+
+    md-form-field, button, #login-text {
+      width: 80%;
+    }
+  }
+
+  #login-email {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  #login-senha {
+    padding-bottom: 10px;
+  }
+
+  #login-esqueceu-senha {
+    padding-bottom: 3%;
+
+    a {
+      text-decoration: none;
+      outline: none;
+      color: #428bca;
+      background: transparent;
+      padding-left: 44%;
+    }
+  }
+
+  button {
+    background-color: #0AC986;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  #login-text {
+    color: #797979;
+    margin-left: 10%;
+
+    h2 {
+      font-size: 30px;
+    }
   }
 }
 

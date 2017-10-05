@@ -1,12 +1,32 @@
 <div class="container" id="login-content" fxLayout="column">
-  <div id="title" fxFlexOffset="150px">
+  <div id="title" fxFlex fxFlexOffset="150px" fxFlexOffset.xs="100px">
         <p>ÁREA DO VOLUNTÁRIO</p>
   </div>
-  <div class="login-form">
+  <div class="login-form" fxFlex>
     <form>
-      <md-form-field>
-        <input mdInput placeholder="Email">
-      </md-form-field>
+      <div id="login-email" fxLayout="row" fxLayoutAlign="center">
+        <md-form-field>
+          <input mdInput placeholder="Email">
+        </md-form-field>
+      </div>
+      <div id="login-senha">
+        <md-form-field>
+          <input mdInput placeholder="Senha">
+        </md-form-field>
+      </div>
+      <div id="login-esqueceu-senha">
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+      <div>
+          <button md-raised-button>Iniciar Sessão</button>
+      </div>
+      <div id="login-text">
+        <h2>Ainda não é Voluntário?</h2>
+        <p>Basta preecher o cadastro e logar para obter mais informações.</p>
+      </div>
+      <div>
+        <button md-raised-button>Fazer Cadastro</button>
+      </div>
     </form>
   </div>
 </div>

@@ -1,9 +1,8 @@
 import {NgModule} from '@angular/core';
 
 import {
+  MatIconModule,
   MdButtonModule,
-  MdCheckboxModule,
-  MatCardModule,
   MatInputModule
 } from '@angular/material';
 
@@ -15,9 +14,8 @@ import {ObserversModule} from '@angular/cdk/observers';
  */
 @NgModule({
   exports: [
+    MatIconModule,
     MdButtonModule,
-    MdCheckboxModule,
-    MatCardModule,
     MatInputModule,
     ObserversModule,
     PlatformModule

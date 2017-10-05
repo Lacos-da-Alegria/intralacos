@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { CustomMaterialModule } from './material.module';
@@ -24,7 +25,9 @@ import { UsuarioServiceService } from './services/usuario-service/usuario-servic
   imports: [
     AppRoutingModule,
     BrowserModule,
+    CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     CustomMaterialModule,
     FlexLayoutModule

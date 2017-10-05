@@ -1,24 +1,33 @@
 <div class="container" id="login-content" fxLayout="column">
   <div id="title" fxFlex fxFlexOffset="150px" fxFlexOffset.xs="100px">
-        <p>ÁREA DO VOLUNTÁRIO</p>
+    <p>ÁREA DO VOLUNTÁRIO</p>
   </div>
   <div class="login-form" fxFlex>
     <form>
-      <div id="login-email" fxLayout="row" fxLayoutAlign="center">
+      <div class="form-group" id="login-email" fxLayout="row" fxLayoutAlign="center">
         <md-form-field>
-          <input mdInput placeholder="Email">
+          <input mdInput type="email" placeholder="Email" [formControl]="emailFormControl">
+          <md-error *ngIf="emailFormControl.hasError('pattern')">
+            Insira um email válido.
+          </md-error>
+          <md-error *ngIf="emailFormControl.hasError('required')">
+            Campo <strong>obrigatório!</strong>
+          </md-error>
         </md-form-field>
       </div>
-      <div id="login-senha">
+      <div class="form-group" id="login-senha">
         <md-form-field>
-          <input mdInput placeholder="Senha">
+          <input mdInput type="password" placeholder="Senha" [formControl]="senhaFormControl">
+          <md-error *ngIf="senhaFormControl.hasError('required')">
+            Campo <strong>obrigatório!</strong>
+          </md-error>
         </md-form-field>
       </div>
       <div id="login-esqueceu-senha">
         <a href="#">Esqueceu a senha?</a>
       </div>
       <div>
-          <button md-raised-button>Iniciar Sessão</button>
+        <button md-raised-button><md-icon>lock</md-icon>Iniciar Sessão</button>
       </div>
       <div id="login-text">
         <h2>Ainda não é Voluntário?</h2>

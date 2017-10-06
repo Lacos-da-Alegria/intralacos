@@ -1,7 +1,10 @@
+import { Observable } from 'rxjs/Rx';
 import { UsuarioLoginModel } from './../../../models/usuarioLogin.models';
 import { Component, Input } from '@angular/core';
 import { Validators, FormControl, NgModel } from '@angular/forms';
 import { UsuarioService } from './../../../services/usuario-service/usuario-service.service';
+
+import 'rxjs/add/operator/toPromise';
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -25,6 +28,14 @@ export class LoginComponent {
   }
 
   login() {
-    console.log(this.usuario.email);
+    this.usuarioService.login(this.usuario)
+    .subscribe(
+      login => {
+        console.log(login);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

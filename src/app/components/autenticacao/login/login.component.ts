@@ -1,5 +1,5 @@
 import { UsuarioLoginModel } from './../../../models/usuarioLogin.models';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Validators, FormControl, NgModel } from '@angular/forms';
 import { UsuarioService } from './../../../services/usuario-service/usuario-service.service';
 

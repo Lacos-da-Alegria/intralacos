@@ -2,8 +2,8 @@ import { environment } from './../../../environments/environment';
 import { UsuarioLoginModel } from './../../models/usuarioLogin.models';
 import { Injectable } from '@angular/core';
 import { Cookie } from 'ng2-cookies';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular/http';
+  import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -23,18 +23,16 @@ export class UsuarioService {
   }
 
   public login(usuario: UsuarioLoginModel) {
-    const urlLogin = environment.serviceUrl + 'login';
+    const urlLogin = '/rest/login';
 
     const  headers = new Headers();
-    headers.append('Access-Control-Expose-Headers', 'Authorization');
     headers.append('Authorization', environment.autorizationHeader);
     headers.append('Content-Type', 'application/json');
 
-    const opts = new RequestOptions();
-    opts.headers = headers;
+    const options = new RequestOptions( {method: RequestMethod.Get, headers: headers });
 
     return this.http
-        .post(urlLogin, usuario, opts)
+        .post(urlLogin, usuario, options)
         .map((res: Response) => {
           const response = res.json();
           if (response && response.token) {

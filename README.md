@@ -1,27 +1,57 @@
 # Intralacos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+Informações do Projeto:   
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)    
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/Lacos-da-Alegria/intralacos-web.svg?columns=all)](http://waffle.io/Lacos-da-Alegria/intralacos-web)
 
-## Development server
+Índice
+---------
+* 1 - O que é o Laços da Alegria?
+* 2 - Como me cadastrar para participar das atividades?
+* 3 - Como posso contribuir para o projeto?
+* 4 - Pré-requisitos
+* 5 - Links úteis
+* 6 - Documentação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1 - O que é o Laços da Alegria?
+-------------------------------
 
-## Code scaffolding
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Laços da Alegria surgiu em 19 de novembro de 2011 com um grupo de aproximadamente 20 amigos que tinham a vontade de realizar visitas periódicas a pacientes em um hospital, caracterizados como doutores-palhaços. A partir de então, esses amigos começaram a realizar visitas a creches e asilos, como o Lar Chico Xavier. Em março de 2012, ingressaram na Associação Brasileira de Apoio a pessoas com Câncer (ABRAPEC), onde vem desenvolvendo visitas mensais para comemorar os aniversariantes do mês. Em setembro do mesmo ano, o grupo já começava a se desenvolver e conquistou o primeiro hospital: Hospital Regional do Gama(HRG). Logo após, expandiu seu trabalho para o Hospital Materno Infantil, onde permaneceu até setembro de 2015 e, em 22 de julho de 2014, o grupo iniciou as atividades no Hospital Universitário de Brasília (HUB).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Laços cresceu e se tornou o maior grupo do Centro-Oeste com cerca de 100 voluntários. Em 2016, em virtude do grande número de integrantes, criou-se uma frente de ações para visitas em creches, orfanatos e asilos quinzenalmente. Nascia nesse momento a diretoria de ONGs, que busca comunicação e parceria com instituições filantrópicas. No presente ano, em 7 de maio, o grupo ingressou no Hospital das Forças Armadas(HFA), em 18 de setembro no Hospital Regional de Taguatinga(HRT) e em 22 de Outubro no Hospital Regional de Planaltina(HRP) hoje visita frequentemente 4 hospitais e uma instituição. Além disso, diversas instituições parceiras recebem visitas agendadas. Atualmente, o grupo conta com 700 voluntários e há dois anos foi organizado em diretorias, visando seu crescimento sustentável.
 
-## Build
+2 - Como faço para participar das atividades?
+---------------------------------------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Basta acessar esse [Link](http://www.intralacos.com/cadastroVoluntario), realizar seu cadastro e escolher a primeira atividade que deseja ir. Você será incluído na fila de espera da atividade e na semana que chegar a sua vez, iremos te contactar.
 
-## Running unit tests
+3 - Como posso contribuir para o projeto?
+-----------------------------------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [Contribuindo](#)
 
-## Running end-to-end tests
+4 - Pré-requisitos
+------------------
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* [Git](https://git-scm.com/)
+* [Node e npm](https://nodejs.org/en/download/)   
+* [Visual Studio Code](https://code.visualstudio.com/download)   
 
-## Further help
+## Extensions VSCode recommended
+* vscode-icons from Roberto Huertas
+* TSLint from egamma
+* rxjs-snippets from prashant
+* Angular V4 Typescript from johnpapa
+* Auto Import from steoates
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+5 - Links úteis
+---------------
+
+* [Angular Documentação](https://angular.io/docs)
+* [CLI Angular Documentação](https://material.angular.io/components/categories)
+* [Material Angular Documentação](https://github.com/angular/angular-cli/wiki)
+
+6 - Documentação do Projeto
+----------------
+
+* [Intralacos Documentação](https://lacos-da-alegria.github.io/intralacos-service/)

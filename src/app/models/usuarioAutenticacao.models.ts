@@ -1,4 +1,4 @@
-export class UsuarioLoginModel {
+export class UsuarioAutenticacaoModel {
   email: string;
   senha: string;
 

@@ -1,16 +1,17 @@
 import { environment } from './../../../environments/environment';
-import { UsuarioLoginModel } from './../../models/usuarioLogin.models';
+import { UsuarioAutenticacaoModel } from './../../models/usuarioAutenticacao.models';
 import { Injectable } from '@angular/core';
 import { Cookie } from 'ng2-cookies';
 import { Http, Response, Headers, RequestOptions, RequestMethod } from '@angular/http';
   import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { UsuarioLogadoModel } from '../../models/usuarioLogado.models';
 
 @Injectable()
 export class UsuarioService {
 
-  private usuarioLogado = null;
+  private usuarioLogado: UsuarioLogadoModel = null;
 
   constructor(
     private http: Http
@@ -22,7 +23,7 @@ export class UsuarioService {
     return this.usuarioLogado;
   }
 
-  public login(usuario: UsuarioLoginModel) {
+  public login(usuario: UsuarioAutenticacaoModel) {
     const urlLogin = '/rest/login';
 
     const  headers = new Headers();
@@ -36,20 +37,25 @@ export class UsuarioService {
         .map((res: Response) => {
           const response = res.json();
           if (response && response.token) {
-            this.usuarioLogado = response;
-            return (login) => this.usuarioLogado;
+            this.usuarioLogado = response as UsuarioLogadoModel;
+            return this.usuarioLogado;
           } else {
-            return (error: {'error': 'Usuário e/ou senha inválido.'}) => error;
+            return {'error': 'Usuário e/ou senha inválido.'};
           }
         });
   }
 
-  private getToken(): string {
-    return Cookie.get('intralacos-api-token');
+  private getToken(): any {
+    const usuario = Cookie.get('intralacos-api-token');
+    if (usuario) {
+      return usuario;
+    } else {
+      return null;
+    }
   }
 
   private carregaUsuario() {
-    this.usuarioLogado = this.getToken();
+    this.usuarioLogado = this.getToken() as UsuarioLogadoModel;
   }
 
 }
